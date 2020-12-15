@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center">
+      Películas
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="10" class="ion-align-items-center">
+        <ion-searchbar placeholder="Buscar..." searchIcon=undefined [(ngModel)]="title"></ion-searchbar>
+      </ion-col>
+      <ion-col size="2" class="ion-align-items-end">
+        <ion-button color="primary" (click)="search(title)"><ion-icon name="search-outline"></ion-icon></ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-list>
+    <ion-item *ngFor="let film of films" (click)="details(film)">
+      <ion-thumbnail slot="start">
+        <img [src]="film.Poster">
+      </ion-thumbnail>
+      <ion-label>{{film.Title}}</ion-label>
+    </ion-item>
+  </ion-list>
+  
+</ion-content>

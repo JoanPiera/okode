@@ -1,0 +1,7 @@
+{
+  "name": "okode",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
