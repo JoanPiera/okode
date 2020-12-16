@@ -19,12 +19,6 @@ export class HomePage {
     //this.getData();
   }
 
-  getData() {
-    this.http.get('http://www.omdbapi.com/?apikey=87464d13', {t:'rush'}, {}).then((value) => {
-      console.log(value);
-    })
-  }
-
   search() {
     this.films = [];
     this.http.get('http://www.omdbapi.com/?apikey=87464d13', {t:this.title}, {}).then((value) => {
